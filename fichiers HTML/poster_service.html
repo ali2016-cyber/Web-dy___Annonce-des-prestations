@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  action="../fichiers PHP/Services.php" method="post">
+    <!-- un form pour enregistrer des service -->
+
+    <!-- Donner un titre pour votre service -->
+        <h3>Titre</h3>
+        <input type="text" name="Titre" required>
+
+    <!-- Donner une description pour votre service -->
+         <h3>Description</h3>
+         <input type="text" name="Description">
+
+    <!-- Donner le prix que vous denner a votre service -->
+        <h3>Prix</h3>
+        <input type="text" name="Prix">
+
+    <!-- Quelle est le domaine ou vous souhaiter travailler -->
+        <h3>type de service</h3>
+        <input type="text" name="Categorie">
+
+    <!--Entrez vous une image descriptive pour la service que vous donner -->
+        <h3>Image descriptive</h3>
+        <input type="file" name="Image_descrip"> <!-- attribut REQUIRED a ajouter apres -->
+
+        <input type="submit" value="Poster">
+
+
+
+    </form>
+      
+    </body>
+</html>

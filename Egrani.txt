@@ -1,0 +1,39 @@
+presque le seule chose quile fait c'est enregistrer les utilisateurs dans la base de donne
+
+pour tche9el ha4e il font mettre ce dosier WEB DY__ANNONCE DES PRESTATIONS dans le dossier "htdocs"
+
+et puis activer le server apache et server mysql apartir de Xamp 
+
+
+et il faut une base de donne dans phpMyAdmin appele  "annonce_prestations"
+
+et avoir des tables :
+
+Table : utilisateurs (id int primary key AUTO_INCREMENT, Nom_complet varchar(100), Email 
+varchar(100) UNIQUE, Mot_de_passe varchar(255), Conte ENUM('Prestataire', 'Client')) 
+
+Table : services  // apres
+
+
+puis rentrez en google chrome et ecrire ce lien   http://localhost/Web%20dy___Annonce%20des%20prestations/fichiers%20PHP/home1.php
+
+
+
+الصفحة الرئسية
+ :home1
+
+
+في حال مانك امسجل 
+-home2: في حال مسجل الدخول 
+
+header : يظهرو فراس الصفحة 
+header-login : فحال مانك امسجل 
+header-logout :يظهرلك لعت امسجل الدخول 
+header :لعت فصفحة التسجيل 
+
+Attentio: Pour le moment tout le projet est dans le dossier fichiers PHP
+
+Et pour le fichier poster_service.html en dossier fichier  HTML jusqua maintement n'a pas de role
+
+
+------------ذا كيف مانك شايف مو سبة :مزلنا لاهي انزيدوه ان شاء الله------------
