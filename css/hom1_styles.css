@@ -1,0 +1,255 @@
+/* 1. Réinitialisation des styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Inclut le padding et les bordures dans la largeur totale */
+}
+
+body {
+    width: 100%;
+    padding-top: 80px;
+    /* Nécessaire car la barre de navigation est en position 'fixed' */
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    /* Configuration pour la langue arabe (droite à gauche) */
+}
+
+/* 2. Style de la barre de navigation (Navbar) */
+.navbar {
+    position: fixed;
+    /* La barre reste fixe en haut de l'écran lors du défilement */
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* La hauteur s'adapte au contenu, avec une valeur minimale pour l'esthétique */
+    height: auto;
+    min-height: 110px;
+    /* Doit être légèrement supérieur à la hauteur du logo */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    /* Centre verticalement les éléments (logo, liens, recherche) */
+    z-index: 1000;
+    /* Assure que la navbar reste au-dessus des autres éléments */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile pour l'effet de profondeur */
+}
+
+/* 3. Conteneur principal de la navigation */
+.nav-container {
+    display: flex;
+    width: 90%;
+    /* Occupe 90% de la largeur pour laisser des marges */
+    margin: 0 auto;
+    /* Centre le conteneur horizontalement */
+    align-items: center;
+    justify-content: space-between;
+    /* Espacement égal entre les éléments enfants */
+}
+
+/* 4. Style du Logo */
+.logo {
+    height: 100px;
+    /* Hauteur fixe pour le logo */
+    width: auto;
+    /* Largeur automatique pour conserver les proportions */
+    object-fit: contain;
+    /* L'image s'ajuste sans être déformée */
+    transition: 0.3s;
+    /* Transition douce pour les effets de survol ou redimensionnement */
+}
+
+/* 5. Éléments de navigation (Liens) */
+.nav-element {
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+    transition: 0.3s;
+    /* Transition fluide pour le changement de couleur */
+}
+
+.nav-element:hover {
+    color: #007bff;
+    /* Changement de couleur au survol (bleu) */
+}
+
+/* 6. Champ de recherche */
+input[type="text"] {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    /* Bordures arrondies pour un look moderne */
+    outline: none;
+    /* Supprime le contour bleu par défaut au focus */
+}
+
+/* 7. Boutons de connexion et de recherche */
+#login,
+#search-button {
+    background-color: #28a745;
+    /* Vert (couleur de succès) */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#login:hover,
+#search-button:hover {
+    background-color: #218838;
+    /* Vert plus foncé au survol */
+}
+
+/* Styles Responsive pour tablettes et mobiles */
+@media (max-width: 768px) {
+
+    /* Réduction de la taille du logo sur mobile */
+    .logo {
+        height: 50px;
+    }
+
+    /* Masquer les éléments de navigation sauf la recherche sur mobile pour gagner de la place */
+    .nav-element:not(:has(input)) {
+        display: none;
+    }
+
+    /* Réduction de la largeur du champ de recherche */
+    input[type="text"] {
+        width: 120px;
+    }
+}
+
+/* Image principale de la page d'accueil */
+#image-home {
+    margin-top: 0px;
+    margin-right: 240px;
+    /* Marge pour le positionnement */
+    width: 800px;
+
+}
+
+@media (max-width: 768px) {
+    #image-home {
+        width: 80%;
+        margin: 200px;
+        /* Marges importantes sur mobile */
+        width: 80%;
+        /* Redondant mais assure la largeur */
+    }
+}
+
+/* Section "Qui sommes-nous" */
+.who-we-are {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    /* Largeur fixe initiale */
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    /* Surcharge la largeur précédente pour prendre tout l'espace */
+    padding: 50px;
+    margin-bottom: 500px;
+    /* Grande marge inférieure */
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 30px;
+    line-height: 1.6;
+    /* Hauteur de ligne pour la lisibilité */
+}
+
+/* Champ de recherche (style spécifique ID) */
+#search-input {
+    width: 300px;
+    border-color: black;
+    width: 70%;
+    height: 70px;
+    border-radius: 7px;
+}
+
+/* Conteneur de recherche centré */
+#search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: -90px;
+    /* Dézalage vers le haut */
+
+}
+
+#search-button {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+/* Suggestions de recherche (Tags) */
+.suggestions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 160px;
+    gap: 20px;
+    /* Espace entre les suggestions */
+    margin-bottom: 250px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style individuel d'une suggestion */
+.suggestion {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Ajustements Responsive pour la section "Qui sommes-nous" et recherche */
+@media (max-width: 768px) {
+    .who-we-are {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    #search-input {
+        width: 100%;
+        height: 50px;
+    }
+
+    .suggestion {
+        width: 70%;
+    }
+
+    .suggestions {
+        flex-direction: column;
+        /* Empiler les suggestions verticalement sur mobile */
+        margin-right: 0;
+        gap: 10px;
+    }
+}

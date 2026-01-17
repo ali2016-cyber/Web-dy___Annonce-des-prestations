@@ -1,0 +1,122 @@
+/*************** Page d'inscription et de connexion ****************************/
+
+/* Conteneur principal du formulaire d'inscription/connexion */
+.inscri-div {
+    min-height: 500px;
+    min-width: 500px;
+    margin-right: 350px;
+    /* Marges importantes pour centrer visuellement sur grand écran */
+    margin-left: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    /* Bords arrondis */
+    display: flex;
+    flex-direction: column;
+    /* Disposition verticale */
+    justify-content: space-between;
+    /* Espace entre l'en-tête, le formulaire et le pied */
+    align-items: center;
+    /* Centrage horizontal */
+    border: 1px solid rgb(73, 73, 245);
+    /* Bordure bleue */
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* Style spécifique du formulaire d'inscription */
+#inscri-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+/* input:active { }  Supprimé car vide */
+
+/* Polices pour les titres (Support arabe) */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+/* Titre "Connexion" */
+#login-txt {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: rgb(73, 73, 245);
+    /* Bleu */
+}
+
+/* Media Query pour les petits écrans (Tablettes/Mobiles) */
+@media (max-width: 768px) {
+    .inscri-div {
+        min-height: 200px;
+        min-width: 200px;
+        margin-right: 50px;
+        /* Réduction des marges */
+        margin-left: 50px;
+        margin-top: 50px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid;
+        /* Bordure simple */
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+/* Styles par défaut des champs de saisie */
+input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    /* Bords arrondis */
+    width: 70%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+/* Boutons "Créer un compte" et "S'inscrire" */
+#cree-conte,
+#inscri-btn {
+    background-color: #28a745;
+    /* Vert succès */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Formulaire de création de compte */
+#conte-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 295px;
+}
+
+/* Séparateur horizontal */
+hr {
+    width: 300px;
+}
+
+/* Titre principal H1 */
+h1 {
+    color: rgb(73, 73, 245);
+    font-family: Noto Kufi Arabic, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* Petit titre H6 (souvent utilisé pour les notes) */
+h6 {
+    margin: 0px;
+}
